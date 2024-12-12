@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EJERCICIO_CRUD_MVVM.Views.ProveedorFormView"
+             xmlns:viewModel="clr-namespace:EJERCICIO_CRUD_MVVM.ViewModels"
+            x:DataType="viewModel:ProveedorFormViewModel"
+             Title="ProveedorFormView">
+    <ScrollView>
+    <VerticalStackLayout Padding="30" Spacing="5" col>
+        <Label Text="Codigo:" />
+        <Entry Text="{Binding Codigo}" Keyboard="Text" />
+        
+        <Label Text="Nombre Proveedor:" />
+        <Entry Text="{Binding Nombreproveedor}" Keyboard="Text" />
+
+        <Label Text="Empresa:" />
+        <Entry Text="{Binding Empresa}" Keyboard="Text" />
+
+        <Label Text="Direccion:" />
+        <Entry Text="{Binding Direccion}" Keyboard="Text" />
+
+        <Button Text="Guardar" Command="{Binding AddUpdateCommand}" BackgroundColor="Green" />
+    </VerticalStackLayout>
+</ScrollView>
+</ContentPage>
